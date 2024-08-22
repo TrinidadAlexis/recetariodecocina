@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recetario de Cocina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #02292b;
+            color: white;
+            margin: 0;
+        }
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px;
+            background-color: #02292b;
+        }
+        .item {
+            display: inline-block;
+            margin: 10px;
+            width: 200px; /* Tamaño decente para una imagen */
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        .item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .item p {
+            margin: 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Recetas que podrian llamar tu atencion</h2>
+<div class="scroll-container">
+    <!-- Repite este bloque para cada imagen con su respectivo texto -->
+    <div class="item">
+        <img src="imagenes/Albondigas.jpg.jpg" alt="Error 356">
+        <p>Albondigas</p>
+    </div>
+    <div class="item">
+        <img src="imagenes/Burritos de carne molida.jpg.jpg" alt="Error 356">
+        <p>Burrito de carne molida</p>
+    </div>
+    <!-- ... Añade aquí hasta 30 imágenes con su texto ... -->
+    <div class="item">
+       <img src="imagenes/Chilesrellenos.jpg.jpg" alt="Error 356">
+        <p>Chiles rellenos</p>
+    </div>
+    <div class="item">
+       <img src="imagenes/Hamburguesarellenadequesoytocino.jpg.jpg" alt="Error 356">
+        <p>Hamburguesa rellana de tocino y queso</p>
+    </div>
+    <div class="item">
+        <img src="imagenes/batido de mango y vainilla.jpg" alt="Error 356">
+        <p>Batido de mando y Vainilla</p>
+    </div>
+    <!-- ... Añade aquí hasta 30 imágenes con su texto ... -->
+    <div class="item">
+      <img src="imagenes/Dragon pink drink.jpg" alt="Error 356">
+        <p>Dragon Pink Drink</p>
+    </div>
+    <div class="item">
+        <img src="imagenes/malteada de chocolate y amaranto.jpg" alt="Error 356">
+        <p>Malteada de chocolate y amaranto </p>
+    </div>
+    <div class="item">
+        <img src="imagenes/vampiro tropical.jpg" alt="Error 356">
+        <p>Vampiro tropical</p>
+    </div>
+    <!-- ... Añade aquí hasta 30 imágenes con su texto ... -->
+    <div class="item">
+       <img src="imagenes/cheesecake con salsa de uva.jpg.jpeg" alt="Error 356">
+        <p>Cheesecake con salsa de uva</p>
+    </div>
+    <div class="item">
+        <img src="imagenes/flan de mago y maracuya .jpg.jpg" alt="Error 356">
+         <p>Flan de mango y maracuya</p>
+     </div>
+     <div class="item">
+        <img src="imagenes/lasaña de galletas con fruta.jpg.jpg" alt="Error 356">
+         <p>Lasaña de galletas con fruta</p>
+     </div>
+     <div class="item">
+         <img src="imagenes/pastel imposible moka.jpg.jpeg" alt="Error 356">
+          <p>Pastel imposible de moka</p>
+      </div>
+      <div class="item">
+        <img src="imagenes/ramen.jpg" alt="Error 356">
+         <p>Ramen</p>
+     </div>
+     <div class="item">
+        <img src="imagenes/sopa de hongos.jpg" alt="Error 356">
+          <p>Sopa campesina</p>
+      </div>
+      <div class="item">
+         <img src="imagenes/crema de pimiento con queso.jpg" alt="Error 356">
+          <p>Crema de pimiento con queso</p>
+      </div>
+      <div class="item">
+          <img src="imagenes/crema de garbenzo con jengibre.jpg" alt="Error 356">
+           <p>Crema de garbanzo con gengibre</p>
+       </div>
+</div>
+<style>
+    body{
+        font-family: 'Arial', sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #02292b;
+        color: #085002;
+    }
+    h1 {
+        text-align: center;
+        color: #000000;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    p {
+        text-align: center;
+        color: #19a3da;
+        font-size: 1.2em;
+    }
+    h2, h3 {
+        color: #e2e2e2;
+        text-align: center;
+        margin-top: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #28ac80;
+        color: #021720;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #28ac80;
+    }
+    .seccion {
+        display: none;
+        padding: 20px;
+        background-color: #4d9664;
+        border: 1px solid #5d438f;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+</style>
+</head>
+<body>
+<h1>Bienvenido al Recetario de Cocina</h1>
+<p>Explora nuestras deliciosas recetas divididas por categorías:</p>
+
+<button onclick="mostrarSeccion('recetas-saladas')">Recetas Saladas</button>
+<button onclick="mostrarSeccion('recetas-dulces')">Recetas Dulces</button>
+<button onclick="mostrarSeccion('recetas-bebidas')">Bebidas</button>
+<button onclick="mostrarSeccion('recetas-sopas')">Sopas y Cremas</button>
+<div id="recetas-saladas" class="seccion">
+    <!-- Contenido de recetas saladas -->
+    <h2>Recetas Saladas</h2>
+    <h3>Receta 1: Albondigas.</h3>
+    <img src="imagenes/Albondigas.jpg.jpg" width="350px" height="250px" alt="Error 356">
+    <h4></h4>
+    <h4>     <h4>Ingredientes.</h4>
+    <ul>
+        <li>2 Tazas de pure de tomate.</li>
+        <li>1 Chile chipotle.</li>
+        <li>3 Tazas de agua..</li>
+        <li>2 Cubos de concentrado de tomate con pollo (CONSOMATE).</li>
+        <li>1 Cucharada de aceite de maíz.</li>
+        <li>800 Gramos de carne de res molida.</li>
+        <li>100 Gamos de tocino picado y frito.</li>
+        <li>1 Huevo.</li>
+        <li>2 Cucharadas de jugo maggi.</li>
+        <li>1 Cucharada de salsa tipo inglesa.</li>
+        <li>2 Cucharadas de cebolla finamente picada.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Para la salsa, licúa el puré de tomate, el chile, el agua y el Concentrado de Tomate con Pollo CONSOMATE. Calienta el aceite en una olla y cocina la salsa a fuego medio por 10 minutos.</p>
+     <p>2.  Para las albóndigas, mezcla la carne con el tocino, la cebolla, el huevo, el Jugo maggie y la Salsa Tipo Inglesa. Forma las albóndigas, colócalas en la salsa, tapa y cocina por 20 minutos a fuego medio o hasta que estén cocidas</p>
+     <p>3.  Sirve las albóndigas en un plato y ofrece.</p>
+    <h3>Receta 2: Hamburguesa rellena de queso y tocino</h3>
+    <img src="imagenes/Hamburguesarellenadequesoytocino.jpg.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes:</h4>
+    <ul>
+        <li>600 Gramos Carne de res de carne molida.</li>
+        <li>2 Cucharadas Sazonador Líquido maggie.</li>
+        <li>2 Cucharadas Salsa Tipo Inglesa.</li>
+        <li>1 Huevo ligeramente batido.</li>
+        <li>1/4 Taza Cebolla picada finamente.</li>
+        <li>1 Diente Ajo picado finamente.</li>
+        <li>1/4 Taza Pan molido.</li>
+        <li>1 Paquete Queso tipo manchego cortado en cubos, 200 g.</li>
+        <li>1 Paquete Tocino 250 gr.</li>
+        <li>5 Piezas Pan para hamburguesa con ajonjolí calientes.</li>
+        <li>5 Hojas Lechuga sangría desinfectadas.</li>
+        <li>1/2 Pieza Cebolla morada fileteada.</li>
+        <li>1 Jitomate rojo, rebanado.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  En un tazón mezcla la carne con el Sazonador Líquido maggie, la Salsa Tipo Inglesa, la cebolla, el huevo, el ajo y el pan molido. Forma bolitas y haz un hoyito con tu dedo, coloca dentro de ellas un cuadrito de queso tipo manchego. Cierra y forma las hamburguesas.</p>
+     <p>2.  Envuelve las hamburguesas con el tocino y cocina en una sartén por ambos lados hasta que estén doradas. Toma un bollo y coloca la carne, la lechuga, la cebolla, el jitomate y acompaña con los aderezos de tu preferencia. Ofrece</p>
+     <h3>Receta 3: Chiles rellenos </h3>
+     <img src="imagenes/Chilesrellenos.jpg.jpg" width="350px" height="250px" alt="Error 356">
+     <h4>Ingredientes.</h4>  
+     <ul>
+      <li>1 Cucharada de Aceite maíz.</li>
+      <li>500 Gramos de Carne molida de res.</li>
+      <li>1/2 Taza de Almendra fileteada.</li>
+      <li>1/2 Cucharadita de Comino.</li>
+      <li>1 Cucharada de Sal.</li>
+      <li>1/2 Cucharadita de Pimienta negra.</li>
+      <li>1 Tableta de Chocolate para mesa ABUELITA rallada.</li>
+      <li>8 Piezas de Chile ancho remojados en agua caliente y sin semilla.</li>
+      <li>1/2 Paquete de Queso tipo manchego.</li>
+      <li>3 Ramitas de Cilantro fresco picado finamente.</li>
+      <li>1 Caja Media Crema NESTLÉ refrigerada.</li>
+     </ul>
+     <h4>Preparación:</h4>
+     <p>1.  En una sartén caliente vierte el aceite, asa la carne de res con las almendras, el comino, la sal, la pimienta y el Chocolate para mesa ABUELITA.</p>
+     <p>2.  Coloca un poco de la carne dentro de los chiles y coloca un poco de queso rallado..</p>
+     <p>3.  Calienta en el microondas por 30 segundos o hasta que el queso este derretido. Decora con un poco de cilantro picado y la Media Crema NESTLÉ . Sirve y ofrece..</p>
+    <h3>Receta 4: Burritos de carne molida</h3>
+    <img src="imagenes/Burritos de carne molida.jpg.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>2 Cucharadas de Aceite vegetal.</li>
+        <li>1/2 Cebolla picada finamente.</li>
+        <li>1 Cucharada de Ajo picado finamente.</li>
+        <li>500 Gramos de Carne de res molida.</li>
+        <li>2 Cucharadas de Jugo maggie.</li>
+        <li>2 Cucharadas de Salsa Tipo Inglesa.</li>
+        <li>2 Chiles serranos cortados en rodajas.</li>
+        <li>1 Cucharadita de Sal con ajo en polvo.</li>
+        <li>5 Ramitas de Perejil fresco desinfectado y picado finamente.</li>
+        <li>6 Tortillas de harina para burritos, calientes.</li>
+        <li>1 Taza de Frijoles bayos enteros calientes.</li>
+        <li>1 Paquete de Queso cheddar rallado (226 g).</li>
+        <li>1/2 Cebolla picada finamente.</li>
+        <li>2 Jitomates cortados en cubos.</li>
+        <li>1 Chile serrano picado finamente.</li>
+        <li>5 Ramitas de Cilantro fresco desinfectado y picado finamente.</li>
+        <li>1 Aguacate cortado en cubos.</li>
+        <li>1 Limón (su jugo).</li>
+        <li>1 Cucharadita de Sal con cebolla en polvo.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  En una sartén, calienta el aceite y fríe ½ cebolla hasta que cambie de color. Agrega el ajo, la carne, el Jugo maggie, la Salsa Tipo Inglesa , 2 chiles, la sal con ajo y el perejil; cocina por 3 minutos.</p>
+    <p>2.  Rellena las tortillas con la preparación de carne, añade frijoles y queso, doblas las orillas y enrolla. Ásalos en una sartén por ambos lados y corta a la mitad.</p>
+    <p>3.  Para el pico de gallo, mezcla ½ cebolla con los jitomates, 1 chile serrano, el cilantro, el aguacate, el jugo de limón, la sal con cebolla y acompaña con los burritos. Ofrece.</p>
+    <h3>Receta 5: Costillas de Cerdo al Ajo</h3>
+   <img src="imagenes/Costillas de Cerdo de Ajo.jpg.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>6 Cucharadas de Jugo maggi.</li>
+        <li>6 Cucharadas de Salsa Inglesa.</li>
+        <li>1 Taza de vinagre de manzana.</li>
+        <li>2 Cucharadas de Kirkland Signature Pimienta Negra.</li>
+        <li>1/4 De cucharada de Kirkland Signature Ajo picado.</li>
+        <li>1 Rack de costillas de cerdo.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa el Jugo MAGGI con la Salsa Inglesa , el vinagre, la Kirkland Signature Pimienta Negra y el Kirkland Signature Ajo Picado.</p>
+    <p>2.  Coloca las costillas en un refractario, baña con la salsa, cubre con papel aluminio y refrigera por 2 horas.</p>
+    <p>3.  Coloca el refractario en el horno y cocina a 180 °C por 120 minutos. Sirve y disfruta.</p>
+    <h3>Receta 6: Costillas de Res BBQ</h3>
+    <img src="imagenes/Costillas de Res BBQ.jpg.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>1 Taza de cátsup.</li>
+        <li>3 Cucharadas de mostaza.</li>
+        <li>1/4 De cucharadita de comino molido.</li>
+        <li>1 Tableta de Chocolate para mesa ABUELITA rallada (90 g).</li>
+        <li>4 Cucharadas de Salsa Tipo Inglesa.</li>
+        <li>3 Cucharadas de Jugo MAGG3 Cucharadas de Jugo MAGGI.</li>
+        <li>800 Gramos de costilla de res.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Horno precalentado 180 °C</p>
+    <p>2.  Mezcla en un tazón la cátsup con la mostaza, el comino, el Chocolate para Mesa ABUELITA, la Salsa Tipo Inglesa, el Jugo MAGGI y reserva.</p>
+    <p>3.  Coloca las costillas en una charola, cubre con un poco de la salsa BBQ, tapa con papel aluminio y hornea a 180 °C por 45 minutos o hasta que las costillas estén cocidas.</p>
+    <p>4.  Sirve las costillas y acompaña con un poco más de salsa BBQ.</p>
+    <!-- Más recetas saladas -->
+
+</div>
+
+<div id="recetas-dulces" class="seccion">
+    <h2>Recetas Dulces</h2>
+    <h3>Receta 1: Pay de Mango </h3>
+   <img src="imagenes/pay de mango.jpg.jpeg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes:</h4>
+    <ul>
+        <li>30 Galletas Marías molidas.</li>
+        <li>1 Barra de mantequilla derretido (90 g).</li>
+        <li>1 Lata de Leche Condensada LA LECHERA.</li>
+        <li>3 Mango.</li>
+        <li>1 1/2 Sobres de grenetina (7 g c/u), hidratada en ¼ taza de agua y disuelta a baño María.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Para la base, mezcla las galletas con la mantequilla hasta formar una pasta, coloca en un molde para pay, cubre la base y los bordes con la pasta de galleta y refrigera durante 10 minutos.</p>
+    <p>2.Para el relleno, licúa la Leche Condensada LA LECHERA con el mango y con la licuadora encendida agrega la grenetina</p>
+    <p>3.  Vierte sobre la base de galleta y refrigera hasta que cuaje por completo.</p>
+    <h3>Receta 2: Pay de manzana</h3>
+        <img src="imagenes/pie de manzana.jpg.jpeg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes:</h4>
+    <ul>
+        <li>1 1/2 Taza Granola para la base.</li>
+        <li>3 Piezas Manzana roja para el relleno.</li>
+        <li>1 Barra Mantequilla reducida en grasa, derretida , para la base (90 g).</li>
+        <li>1 Lata Leche Condensada LA LECHERA para el relleno.</li>
+        <li>2 Cucharadas Fécula de maíz disuelta en ¼ taza de agua, para el relleno.</li>
+        <li>1 Cucharada Mantequilla reducida en grasa.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Para la base, mezcla la granola con la mantequilla. Forra 8 moldes individuales para pay con papel aluminio y cubre el fondo con la preparación anterior; refrigera 15 minutos.</p>
+    <p>2.  Para el relleno, derrite la mantequilla en una sartén y cocina las manzanas durante 5 minutos. Agrega la Leche Condensada LA LECHERA® con la fécula de maíz, previamente disuelta; mezcla y cocina 8 minutos a fuego bajo o hasta que espese un poco, moviendo constantemente para evitar que se pegue.</p>
+    <p>3.  Acomoda las manzanas cocidas sobre las bases de granola, refrigera 30 minutos y ofrece.</p>
+    <h3>Receta 3: Lasaña de Galletas con Fruta</h3>
+    <img src="imagenes/lasaña de galletas con fruta.jpg.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>1 1/2 Paquete de queso crema reducido en grasa y a temperatura ambiente.</li>
+        <li>1/2 Taza de LA LECHERA Cero.</li>
+        <li>1 Taza de Leche Evaporada CARNATION CLAVEL Reducida en Grasa.</li>
+        <li>1/4 De taza de jugo de limón.</li>
+        <li>2 Paquetes Galletas RICANELAS GAMESA Clásicas (113 g c/u).</li>
+        <li>1 Taza de fresas desinfectadas y cortadas en cuartos.</li>
+        <li>2 Plátanos cortados en rodajas.</li>
+        <li>2 Kiwis cortados en rodaja.</li>
+        <li>2 Cucharadas de nuez picada.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa el queso, la Leche Condensada LA LECHERA Sin Grasa*, la Leche Evaporada CARNATION CLAVEL Reducida en Grasa y agrega poco a poco el jugo de limón hasta integrar por completo.</p>
+    <p>2.  En un refractario, coloca una capa de Galletas RICANELAS GAMESA Clásicas, añade un poco de la mezcla anterior, forma otra capa de fresas con plátano y kiwi, repite con el resto de los ingredientes hasta terminar con una capa de queso. Cubre con plástico adherente y refrigera por 30 minutos.</p>
+    <p>3.  Decora con la nuez y una Galleta RICANELAS GAMESA Clásicas troceada; ofrece.</p>
+    <h3>Receta 4: Cheesecake con salsa de uva</h3>
+        <img src="imagenes/cheesecake con salsa de uva.jpg.jpeg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>1/2 Barra de Mantequilla fundida (45 g).</li>
+        <li>30 Piezas de Galletas Marías molidas.</li>
+        <li>2 Paquetes de Queso crema a temperatura ambiente (190 g c/u).</li>
+        <li>1/2 Lata de Leche Condensada LA LECHERA.</li>
+        <li>1 Taza de Leche Evaporada CARNATION CLAVEL.</li>
+        <li>1 Lata de Media Crema NESTLÉ.</li>
+        <li>2 Sobres de Grenetina (7 g c/u) hidratada en ½ taza de agua y disuelta a baño María.</li>
+        <li>2 Tazas de Uva morada.</li>
+        <li>1 Taza de Azúcar Orgánica KIRKLAND SIGNATURE.</li>
+        <li>1 Taza de Agua.</li>
+        <li>2 Sobres de Grenetina (7 g c/u) hidratada en ½ taza de agua (125 ml) y disuelta a baño María.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Para la base, mezcla las galletas Marías con la mantequilla, vierte en un aro para pastelería con la base previamente forrada con aluminio y las paredes con acetato. Presiona ligeramente para formar una costra y refrigera.</p>
+    <p>2.  Para el relleno, bate el queso hasta acremar, agrega ½ lata de Leche Condesada LA LECHERA, la Leche Evaporada CARNATION CLAVEL, la Media Crema NESTLÉ y la grenetina. Vierte el relleno sobre la base y refrigera hasta que esté firme.</p>
+    <p>3.  En una olla mezcla las uvas con el Azúcar Orgánica KIRKLAND SIGNATURE y el agua; Calienta y mueve hasta integrar por completo los ingredientes. Enfría, agrega la grenetina, vierte la mezcla sobre el molde y refrigera hasta que esté firme. Desmolda el cheesecake y ofrece.</p>
+    <h3>Receta 5: Flan de Mango y Maracuyá</h3>
+    <img src="imagenes/flan de mago y maracuya .jpg.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>3/4 de taza de azúcar refinada.</li>
+        <li>1 1/2 Tazas de Alimento a Base de Coco CARNATION CLAVEL.</li>
+        <li>1/2 Taza de azúcar.</li>
+        <li>2 Cucharadas de esencia de vainilla.</li>
+        <li>6 Huevos.</li>
+        <li>1 1/2 Cucharada de fécula de maíz.</li>
+        <li>2 Mangos su pulpa.</li>
+        <li>1/2 Taza de azúcar refinada.</li>
+        <li>1 Taza de pulpa de maracuyá.</li>
+        <li>Menta desinfectada (al gusto).</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Calienta ¾ taza de azúcar en una flanera, moviendo constantemente hasta formar el caramelo. Ladea el molde para cubrir las paredes y la base de la flanera; deja enfriar.</p>
+    <p>2.  Licúa el Alimento a Base de Coco CARNATION CLAVEL, ½ taza de azúcar, la esencia de vainilla, los huevos, la fécula de maíz y el puré de mango. Vierte lo que licuaste en la flanera, cubre con papel aluminio sellando las orillas. Colócalo en una olla de presión y cocina a baño María por 30 minutos a partir de que empiece a sonar la válvula; deja enfriar. Desmolda y refrigera por 2 horas</p>
+    <p>3.  Para la salsa de maracuyá, calienta ½ taza de azúcar con la pulpa de maracuyá, cocina hasta que espese ligeramente moviendo constantemente para evitar que se pegue; deja enfriar. Sirve el flan con la salsa, decora con las hojas de menta y ofrece.INFORMACIÓN NUTRICIONAL</p>
+    <h3>Receta 6: Pastel Imposible de Moka</h3>
+   <img src="imagenes/pastel imposible moka.jpg.jpeg" width="350px" height="250px" alt="Error 356">>
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>1 Taza de cajeta.</li>
+        <li>1 Lata de Leche Evaporada CARNATION CLAVEL.</li>
+        <li>3 Huevos.</li>
+        <li>1 Taza de aceite vegetal.</li>
+        <li>1 Paquete de harina para preparar pastel de chocolate (232 g).</li>
+        <li>3 Cucharadas de Café soluble NESCAFÉ CLÁSICO.</li>
+        <li>1 Lata de Leche Condensada LA LECHERA.</li>
+        <li>1 Lata de Leche Evaporada CARNATION CLAVEL.</li>
+        <li>5 Huevos.</li>
+        <li>3 Cucharadas de esencia de nuez.</li>
+        <li>1 Taza de fresa desinfectadas y cortadas en cuartos.</li>
+        <li>1/4 De taza de nuez picada.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Precalentar el Horno a 180 °C</p>
+    <p>2.  Cubre el fondo y las paredes de un molde redondo, engrasado y enharinado con la cajeta. Licúa 1 lata de Leche Evaporada CARNATIO CLAVEL con los 3 huevos, el aceite de maíz, la harina para preparar pastel sabor chocolate y el Café Soluble NESCAFÉ CLÁSICO hasta integrar por completo.</p>
+    <p>3.   Para el flan, licúa la Leche Condensada LA LECHERA® con 1 lata de Leche Evaporada CARNATION CLAVEL, 5 huevos y la esencia de nuez</p>
+    <p>4.  Vacía en el molde la mezcla del pastel de chocolate, con ayuda de una cuchara vierte poco a poco la mezcla del flan. Cubre el molde con papel aluminio y hornea a 180 °C a baño María durante 1 ½ horas. Deja enfriar, desmolda y refrigera por lo menos 1 hora; decora con las fresas y la nuez. Ofrece.</p>
+    <!-- Más recetas dulces -->
+</div>
+
+<div id="recetas-bebidas" class="seccion">
+    <h2>Bebidas</h2>
+    <h3>Receta 1: Smoothie de mango con ciruela </h3>
+    <img src="imagenes/smothie de mango y ciruela.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes:</h4>
+    <ul>
+        <li>500 Gramos de Mango congelado</li>
+        <li>2 Tazas de CARNATION Origen Avena</li>
+        <li>1/4 Taza de Miel de abeja</li>
+        <li>2 Ciruelas sin hueso</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa el mango con 2 tazas de CARNATION® CLAVEL® Origen Avena, la miel de abeja y la ciruela.</p>
+    <p>2.  Sirve en vasos.</p>
+    <p>3.  Ofrece</p>
+    <h3>Receta 2: Dragon Pink Drink </h3>
+    <img src="imagenes/Dragon pink drink.jpg" width="350px" height="350px" alt="Error 356">
+    <h4>Ingredientes:</h4>
+    <ul>
+        <li>1 Pitaya.</li>
+        <li>1 Pitahaya.</li>
+        <li>2 Tazas de agua.</li>
+        <li>1 1/2 Cucharadita de Salsa Tipo Inglesa CROSSE & BLACKWELL.</li>
+        <li>1 Limón amarillo, su jugo.</li>
+        <li>1/3 Taza de miel de agave.</li>
+        <li>3 Tazas de hielo.</li>
+        <li>1 Limón amarillo, cortado en rodajas.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa la pitaya, la pitahaya, el agua, la Salsa Inglesa CROSSE & BLACKWELL®, el jugo de limón y la miel de agave.</p>
+    <p>2.  En 2 vasos altos, vierte el hielo, las rodajas de limón y lo que licuaste.</p>
+    <p>3.  Decora con una rodaja de limón y ofrece.</p>
+    <h3>Receta 3: Vampirito tropical</h3>
+    <img src="imagenes/vampiro tropical.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>1 Taza Bebida de almendra con jugo con jugo de Frutos tropicales Nature´s Heart (250 ml).</li>
+        <li>1 Cucharada Salsa Tipo Inglesa CROSSE & BLACKWELL.</li>
+        <li>1/2 Taza Betabel rallad.</li>
+        <li>1 Taza Hielo frappé.</li>
+        <li>1 Cucharada Miel de agave.</li>
+        <li>1 Pieza Limones su jugo y cortado en rodajas.</li>
+        <li>1 Cucharadita Chile con limón en polvo.</li>
+        <li>2 Palos Apio.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.- Licúa la bebida de almendra con jugo de Frutos tropicales Nature´s Heart con la Salsa Tipo Inglesa CROSSE & BLACKWELL, el betabel, la zanahoria y la miel.</p>
+   <p>2.- Escarcha los vasos con el jugo de limón y el chile.</p>
+   <p>3.- Vierte un poco de jugo de limón en los vasos con los hielos, sirve el vampirito y decora con el apio o rodajas de limón</p>
+   <h3>Receta 4: Mandarina Red</h3>
+  <img src="imagenes/madarina red.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>1 Botella de cóctel de tomate y almeja.</li>
+        <li>2 Tazas de jugo de mandarina.</li>
+        <li>2 Cucharadas de Miche MAGGI.</li>
+        <li>1 Cucharadita de salsa Tabasco.</li>
+        <li>3 Cucharadas de chile en polvo con limón.</li>
+        <li>2 Tazas de hielo.</li>
+        <li>1 Ramas de apio.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Mezcla el de cóctel de tomate y almeja, el jugo de mandarina, el Miche MAGGI®, la salsa y el chile con limón.</p>
+    <p>2.  Sirve en un tarro, escarchado con chile en polvo, agrega hielos y decora con una rama de apio; mezcla.</p>
+    <p>3.  Ofrece.</p>
+    <h3>Receta 5: Malteada de chocolate con amaranto</h3>
+    <img src="imagenes/malteada de chocolate y amaranto.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>1 Taza de Chocolate ABUELITA Granulado.</li>
+        <li>1 Taza de Amaranto.</li>
+        <li>2 Tazas de Hielo.</li>
+        <li>1 Lata de Leche Evaporada CARNATION CLAVEL (1 1/2 tazas).</li>
+        <li>2 Cucharadas de Amaranto tostado para escarchar.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa el Chocolate ABUELITA Granulado con 1 taza de amaranto, el hielo y la Leche Evaporada CARNATION CLAVEL hasta integrar por completo.</p>
+    <p>2.  Sirve en un vaso escarchado con amaranto y ofrece.</p>
+    <h3>Receta 6: Batido de vainilla con mango</h3>
+   <img src="imagenes/batido de mango y vainilla.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>3/4 Taza de COFFEE MATE® Líquido Sabor Vainilla.</li>
+        <li>2 Tazas de Mango congelado.</li>
+        <li>1/2 Pieza de Mango cortado en cubos.</li>
+        <li>4 Hojas de Menta fresca desinfectada.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa el COFFEE MATE Líquido Sabor Vainilla con el mango congelado.</p>
+    <p>2.  Sirve el batido, decora con el mango y las hojas de menta.</p>
+    <p>3.  Disfruta y comparte</p>
+    <!-- Más recetas de bebidas -->
+</div>
+
+<div id="recetas-sopas" class="seccion">
+    <h2>Sopas y Cremas</h2>
+    <h3>Receta 1: Sopa de Hongos</h3>
+    <img src="imagenes/sopa de hongos.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes:</h4>
+    <ul>
+        <li>2 Cucharadas de aceite vegetal.</li>
+        <li>1/4 De pieza de cebolla picada finamente.</li>
+        <li>1 Diente de ajo picado finamente.</li>
+        <li>4 Tazas de hongos fileteados.</li>
+        <li>2 Chiles guajillo sin semillas y remojados en agua caliente.</li>
+        <li>1 Taza de puré de tomate natural.</li>
+        <li>1/2 Cucharada de sal con cebolla en polvo.</li>
+        <li>2 Cubos de Concentrado de Tomate con Pollo CONSOMATE.</li>
+        <li>5 Tazas de agua.</li>
+        <li>4 Ramas de epazote.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Calienta el aceite, cocina la cebolla y el ajo hasta que cambien de color, añade los hongos y cocina por 5 minutos más.</p>
+    <p>2.  Licúa los chiles, el puré de tomate, la sal con cebolla, el Concentrado de Tomate con Pollo CONSOMATE y 1 taza de agua. Vierte lo que licuaste sobre la preparación anterior y cocina hasta que hierva; añade el agua restante, el epazote y cocina por 10 minutos.</p>
+    <p>3.  Emplata y Ofrece.</p>
+    <h3>Receta 2: Sopa Ramen </h3>
+   <img src="imagenes/ramen.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes:</h4>
+    <ul>
+        <li>1 Cucharada de aceite de ajonjolí.</li>
+        <li>1/2 Cebolla morada fileteada.</li>
+        <li>1 Cucharada de ajo picado.</li>
+        <li>2 Zanahorias cortadas en cubos.</li>
+        <li>2 Tazas de acelga desinfectada y rallada.</li>
+        <li>1 Calabaza cortada en medias lunas.</li>
+        <li>1 Taza de col morada desinfectada y rallada.</li>
+        <li>1 Cucharada de sal con cebolla en polvo en polvo.</li>
+        <li>1/2 Taza de Salsa de Soya MAGGI.</li>
+        <li>1 1/2 Litros de agua.</li>
+        <li>1 Paquete De fideos de arroz cocidos (200 g).</li>
+        <li>2 Medallones de atún fresco cortado en láminas.</li>
+        <li>5 Rabos de cebolla cambray desinfectados y picados finamente.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Calienta el aceite y fríe la cebolla hasta que cambie de color, añade el ajo, las zanahorias, las acelgas, la calabaza y la col, cocina por 3 minutos. Agrega la sal con cebolla, la Salsa de Soya MAGGI, el agua y cocina por 5 minutos más.</p>
+    <p>2.  Divide los fideos cocidos en 4 tazones, añade un poco de la preparación anterior y decora con láminas de atún y rabos de cebolla.</p>
+    <p>3.  Emplata y Ofrece.</p>
+    <h3>Receta 3: Sopa campesina</h3>
+    <img src="imagenes/sopa campesina.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>2 Jitomates sin semillas.</li>
+        <li>1 Diente de Ajo pelado.</li>
+        <li>1 Cubo de Concentrado de Tomate con Pollo CONSOMATE.</li>
+        <li>4 Tazas de Caldo de pollo.</li>
+        <li>1 Cucharada de Aceite de maíz.</li>
+        <li>1/4 Cebolla picada finamente.</li>
+        <li>3/4 Taza de Granos de elote blanco.</li>
+        <li>200 Gramos de Champiñones rebanados.</li>
+        <li>1 Taza de Flor de calabaza limpia.</li>
+        <li>100 Gramos de queso panela cortado en cubos.</li>
+        <li>1 Chile serrano rebanad.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa los jitomates con el ajo, el Concentrado de Tomate con Pollo CONSOMATE y el caldo de pollo. Reserva.</p>
+    <p>2.  Vierte el aceite en una olla, agrega la cebolla y los granos de elote, cocina hasta que doren ligeramente, añade los champiñones y la flor de calabaza, cocina por 5 min.</p>
+    <p>3.  Vierte lo que licuaste y cocina por 10 minutos a flama baja. Sirve la sopa y acompaña con queso panela y rodajas de chile.</p>
+    <h3>Receta 4: Crema de Pimiento con Queso</h3>
+    <img src="imagenes/crema de pimiento con queso.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>1 Lata de Leche Evaporada CARNATION CLAVEL (1 1/2 tazas).</li>
+        <li>1 Lata de Media Crema NESTLÉ.</li>
+        <li>50 Gramos de Queso de cabra.</li>
+        <li>1 Lata de Pimiento morrón escurrido (250 g).</li>
+        <li>1 1/2 Cucharadas de Consomé de pollo en polvo.</li>
+        <li>1 1/2 Tazas de Agua.</li>
+        <li>1 1/2 Cucharadas de Fécula de maíz.</li>
+        <li>2 Cucharadas de Mantequilla.</li>
+        <li>1 Cucharada de Ajo picado finamente.</li>
+        <li>1 Envase de Media Crema NESTLÉ refrigerado (190 g).</li>
+        <li>4 Ramitas de Perejil fresco desinfectado y picado finamente.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa la Leche Evaporada CARNATION CLAVEL, la lata de Media Crema NESTLÉ, el queso de cabra, el pimiento, el consomé de pollo, el agua y la fécula de maíz.</p>
+    <p>2.  Calienta la mantequilla y fríe el ajo hasta que cambie de color. Vierte lo que licuaste y calienta hasta que espese ligeramente moviendo constantemente para evitar que se pegue.</p>
+    <p>
+        3.  Sirve, decora con unas gotas de Media Crema NESTLÉ® alrededor de la crema, pasa la punta de un palillo por cada gota para formar corazones y termina con un poco de perejil al centro. Ofrece.</p>
+    <h3>Receta 5: Crema de Zanahoria Casera</h3>
+    <img src="imagenes/crema de zanahoria.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>4 Zanahorias en rodajas y cocidas.</li>
+        <li>1 Envase de Leche Evaporada CARNATION CLAVEL (360 g).</li>
+        <li>1 Taza de agua.</li>
+        <li>1 Cucharada de consomé de pollo en polvo.</li>
+        <li>1/4 De cucharadita de jengibre molido.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Licúa las zanahorias con la Leche Evaporada CARNATION CLAVEL, el agua, el consomé de pollo y el jengibre.</p>
+    <p>2.  Vierte en una olla y calienta a fuego medio durante 8 minutos o hasta que espese ligeramente.</p>
+    <p>3. Emplata y Ofrece.</p>
+    <h3>Receta 6: Crema de garbanzo con jengibre </h3>
+    <img src="imagenes/crema de garbenzo con jengibre.jpg" width="350px" height="250px" alt="Error 356">
+    <h4>Ingredientes.</h4>
+    <ul>
+        <li>2 Cucharadas de Aceite de oliva.</li>
+        <li>1 Cucharada de Ajo picado finamente.</li>
+        <li>1 1/2 Cucharaditas de Jengibre fresco picado finamente.</li>
+        <li>4 Jitomates rostizados.</li>
+        <li>1 1/2 Tazas de Garbanzos cocidos.</li>
+        <li>1 Cucharada de Hojuelas de chile.</li>
+        <li>5 Ramitas de Cilantro fresco desinfectado.</li>
+        <li>1/2 Taza de Agua.</li>
+        <li>3 Tazas de Alimento a Base de Coco CARNATION CLAVEL.</li>
+        <li>1 1/2 Cucharadas de Consomé de vegetales en polvo.</li>
+        <li>8 Hojas de Cilantro fresco desinfectad.</li>
+        <li>1/2 Taza de Garbanzos tostados.</li>
+        <li>1/4 Taza de Pepita verde sin sal y tostada.</li>
+    </ul>
+    <h4>Preparación:</h4>
+    <p>1.  Calienta el aceite de oliva y fríe el ajo con el jengibre hasta que doren ligeramente, añade los jitomates, cocina por 1 minuto más.</p>
+    <p>2.  Licúa la preparación anterior con 1 ½ tazas de garbanzos cocidos, las hojuelas de chile, 5 ramas de cilantro, el agua, el Alimento a Base de Coco CARNATION CLAVEL y el consomé de verduras.</p>
+    <p>3.  Calienta lo que licuaste y cocina hasta que espese ligeramente. Sirve y decora con las hojas de cilantro, los garbanzos tostados y las pepitas. Ofrece.</p>
+    <!-- Más recetas de sopas y cremas -->
+</div>
+<script>
+    function mostrarSeccion(id) {
+        var secciones = document.getElementsByClassName("seccion");
+        for (var i = 0; i < secciones.length; i++) {
+            secciones[i].style.display = "none";
+        }
+        document.getElementById(id).style.display = "block";
+    }
+    </script>
+</body>
+</html>
